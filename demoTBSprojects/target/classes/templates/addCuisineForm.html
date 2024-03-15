@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cuisine</title>
+	
+</head>
+<body>
+    <h1>Add Cuisine</h1>
+    <form th:action="@{/cuisines/add}" th:object="${cuisine}" method="post">
+        <label for="cuisineName">Name:</label>
+        <input type="text" id="cuisineName" th:field="*{cuisineName}" required><br><br>
+        
+        <label for="cuisineItem">Item:</label>
+        <input type="text" id="cuisineItem" th:field="*{cuisineItem}" required><br><br>
+        
+        <label for="cuisinePrice">Price:</label>
+        <input type="number" id="cuisinePrice" th:field="*{cuisnePrice}" required><br><br>
+        
+        <button type="submit">Add Cuisine</button>
+    </form>
+</body>
+
+<style>
+	/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form styling */
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: #fff;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+</style>
+</html> 

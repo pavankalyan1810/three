@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Tables</title>
+</head>
+<body>
+    <h1>Available Tables</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Capacity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over availableTables and display details -->
+            <tr th:each="table : ${availableTables}">
+                <td th:text="${table.tableId}"></td>
+                <td th:text="${table.tableName}"></td>
+                <td th:text="${table.capacity}"></td>
+                <td>
+                    <!-- Pre-book Table button -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

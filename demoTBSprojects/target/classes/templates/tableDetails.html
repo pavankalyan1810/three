@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Details</title>
+</head>
+<body>
+    <h1>Table Details</h1>
+    <h2>Table Information</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Capacity</th>
+                <th>Booked</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="${table.tableId}"></td>
+                <td th:text="${table.tableName}"></td>
+                <td th:text="${table.capacity}"></td>
+                <td th:text="${table.booked} ? 'Yes' : 'No'"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Actions</h2>
+   
+    
+    <form th:action="@{'/tables/setavailable/' + ${table.tableId}}" method="POST">
+        <button type="submit">Set Available</button>
+    </form>
+    
+    <a th:href="@{/tables}">Back to Table List</a>
+</body>
+</html>

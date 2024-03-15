@@ -1,0 +1,71 @@
+
+        /* Body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/vintage-old-rustic-cutlery-dark_1220-4886.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            height: 100vh; /* Set the height of the body to the full viewport height */
+    		overflow: hidden;
+            
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: rgb(157, 0, 0); /* Red background color */
+            color: black; /* Black text color */
+            padding: 10px 20px; /* Adjust padding as needed */
+            display: flex;
+            justify-content: space-between; /* Items spread evenly */
+            align-items: center;
+        }
+
+        /* Table styling */
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px; /* Adjust the top margin as needed */
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            background-color: rgba(247, 247, 247, 0.8); /* Semi-transparent background */
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            color: #000; /* Black text color */
+        }
+
+        th {
+            background-color: rgb(157, 0, 0); /* Red color for table header */
+            color: #fff; /* White text color */
+        }
+
+        /* Link styling */
+        a {
+            color: #fff;
+            text-decoration: none;
+            background-color: rgb(157, 0, 0); /* Red color */
+            padding: 12px 20px; /* Adjust padding as needed */
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: rgba(247, 247, 247, 0.8); /* Darker red color on hover */
+        }
+
+        h1 {
+            font-size: 32px; /* Adjust font size as needed */
+            margin: 20px; /* Add margin to create space */
+        }
+    

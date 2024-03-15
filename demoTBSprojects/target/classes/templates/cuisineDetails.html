@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine Details</title>
+</head>
+<body>
+    <h1>Cuisine Details</h1>
+    <p>ID: <span th:text="${cuisine.cuisineId}"></span></p>
+    <p>Name: <span th:text="${cuisine.cuisineName}"></span></p>
+    <p>Item: <span th:text="${cuisine.cuisineItem}"></span></p>
+    <p>Price: <span th:text="${cuisine.cuisnePrice}"></span></p>
+    
+    <!-- Update Cuisine button -->
+    <form th:action="@{'/cuisines/' + ${cuisine.cuisineId} + '/update'}" method="POST">
+        <button type="submit">Update Cuisine</button>
+    </form>
+    
+    <!-- Delete Cuisine button -->
+    <form th:action="@{'/cuisines/' + ${cuisine.cuisineId} + '/delete'}" method="POST">
+        <button type="submit">Delete Cuisine</button>
+    </form>
+</body>
+</html>
